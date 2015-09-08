@@ -1,6 +1,7 @@
 # Getting started
 
-This scaffold has two global dependencies: Node and Gulp. To install Node, find the installer here:
+This scaffold has two global dependencies: Node and Gulp. Uses the Open Weather API
+. To install Node, find the installer here:
 
 * [Node](https://nodejs.org/)
 
