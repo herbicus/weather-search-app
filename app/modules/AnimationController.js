@@ -8,7 +8,9 @@ var TweenMax = require('TweenMax');
 var AnimationController = function() {
 
   this.box = document.querySelector('.box');
-  this.sixCol = document.querySelector('.six-col');
+  this.mainIcon = document.querySelector('.l-main-icon');
+  this.cityName = document.querySelector('.two-col h2');
+  this.mainTemp = document.querySelector('.two-col h1');
   
   this.init();
 
@@ -18,16 +20,15 @@ AnimationController.prototype.firstAnimation = function() {
 
   var tl = new TimelineMax();
 
-  tl.staggerTo ('.six-col', 0.35, {autoAlpha: 1, top: 0, ease:Back.easeInOut}, 0.15);
-  tl.staggerTo ('.day-title', 0.35, {autoAlpha: 1, top: 0, ease:Power2.easeOut}, 0.15, 0.25);
-  tl.staggerTo ('.l-weather-icon', 0.35, {autoAlpha: 1, top: 0, ease:Power2.easeOut}, 0.25, 0.15);
+  tl.to (this.cityName, 0.35, {autoAlpha: 1, top: 0, ease:Power4.easeOut});
+  tl.to (this.mainIcon, 0.35, {autoAlpha: 1, top: 0, ease:Back.easeInOut}, 0.075);
+  tl.to(this.mainTemp, 0.35, {autoAlpha: 1, top: 0, ease:Power4.easeOut}, 0.125);
+  tl.staggerTo ('.six-col', 0.35, {autoAlpha: 1, top: 0, ease:Back.easeInOut}, 0.125, 0.15);
+  tl.staggerTo ('.day-title', 0.35, {autoAlpha: 1, top: 0, ease:Power2.easeOut}, 0.135, 0.25);
+  tl.staggerTo ('.l-weather-icon', 0.35, {autoAlpha: 1, top: 0, ease:Power2.easeOut}, 0.14, 0.35);
+  tl.staggerTo ('.forecast-temp', 0.35, {autoAlpha: 1, top: 0, ease:Power2.easeOut}, 0.15, 0.35);
   
   
-  // tl.to (this.box, 0.75, {autoAlpha: 1, left: 20, ease: Power2.easeOut});
-  
-  // tl.to (this.box, 0.75, {autoAlpha: 0.5, top: 20, ease: Power2.easeOut});
-  // tl.to (this.box, 0.75, {autoAlpha: 1, left: 0, top: 0, ease: Power4.easeOut});
-
   return tl;
 
 };

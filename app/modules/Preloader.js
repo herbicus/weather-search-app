@@ -48,7 +48,7 @@ Preloader.prototype.imagesAreLoaded = function() {
 
   	this.body = document.querySelector('body');
 
-  	TweenLite.to(this.body , 0.5, {
+  	TweenMax.to(this.body , 0.5, {
   		autoAlpha: 1,
   		display: "block",
   		ease: Power2.easeInOut,
