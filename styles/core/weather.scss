@@ -1,0 +1,51 @@
+// -------------------------------------
+//   Main Weather Stylings
+// -------------------------------------
+// ----- specific project stlyes
+// -------------------------------------
+
+body {
+	background: $white;
+	opacity: 0;
+	visibility: hidden;
+}
+
+
+.six-col {
+	position: relative;
+	top: 20px;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.box {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1; 
+	background: url("../images/candh.jpg");
+	@include bg-cover; 
+	visibility: hidden !important; 
+}
+
+.l-main-icon {
+	width: 100px;
+	height: 100px;
+	float: left;
+	padding-right: 2%;
+}
+
+.l-weather-icon {
+	opacity: 0;
+	visibility: hidden;
+	position: relative;
+	top: 20px;
+}
+
+.l-current-extra {
+	@include media-query(tablet) {
+		display: none;
+	}
+}
