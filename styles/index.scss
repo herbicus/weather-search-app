@@ -50,11 +50,14 @@
 
 body {
 	background: $white;
-	opacity: 0;
-	visibility: hidden;
 }
 
 header {
+	position: relative;
+	left: -30px;
+	opacity: 0;
+	visibility: hidden;
+	 
 	.form {
 
 		button {
