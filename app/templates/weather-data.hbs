@@ -1,0 +1,88 @@
+<div class="inner-data">
+	
+	<div class="row l-current">
+		
+		<div class="two-col">
+
+			<h2>{{ city.name }}</h2>
+			<h5 class="l-current-date"></h5>
+			<small>Right Now:</small>
+
+			<img class="l-main-icon pull-left" src="http://openweathermap.org/img/w/{{ list.0.weather.0.icon }}.png">
+
+			<h3 class="pull-left">{{ list.0.weather.0.main }}</h3>
+			<h1 class="pull-left">{{ list.0.deg }} &#176;F</h1>
+
+			<br/>
+			<small>What To Expect:</small>
+			<p>{{ list.0.weather.0.description }}</p>
+			<p>{{ city.country}}</p>
+		</div>
+
+		<div class="two-col l-current-extra">
+
+		  <p><strong>Currently: </strong>{{ list.0.deg }} &#176;F</p>
+		  <br/>
+		  <p><strong>Wind: </strong>{{ wind.seed }} mps</p>
+		  <p><strong>Minimum Temperature: </strong>{{ list.0.temp.min }} &#176;F</p>
+		  <p><strong>Maximum Temprature: </strong>{{ list.0.temp.max  }} &#176;F</p>
+		  <p><strong>Pressure: </strong>{{ list.0.pressure }} hpa</p>
+		  <p><strong>Humidity: </strong>{{ list.0.humidity }} &#37;</p>
+
+		</div>
+	</div>
+
+	<div class="row l-forecast">
+
+	    <div class="six-col">
+		  <h5 class="next-day-1 day-title"></h5>
+	      <h3>{{ list.0.weather.0.main }}</h3>
+	      <img class="l-weather-icon" src="http://openweathermap.org/img/w/{{ list.0.weather.0.icon }}.png">
+	      <h4>{{ list.0.temp.day }} &#176;F</h4>
+	      <h4>{{ list.0.weather.0.description }}</h4>
+	    </div>
+
+	    <div class="six-col">
+	      <h5 class="next-day-2 day-title"></h5>
+	      <h3>{{ list.1.weather.0.main }}</h3>
+	      <img class="l-weather-icon" src="http://openweathermap.org/img/w/{{ list.1.weather.0.icon }}.png">
+	      <h4>{{ list.1.temp.day }} &#176;F</h4>
+	      <h4>{{ list.1.weather.0.description }}</h4>
+	    </div>
+
+	    <div class="six-col">
+	     <h5 class="next-day-3 day-title"></h5>
+	     <h3>{{ list.2.weather.0.main }}</h3>
+	      <img class="l-weather-icon" src="http://openweathermap.org/img/w/{{ list.2.weather.0.icon }}.png">
+	      <h4>{{ list.2.temp.day }} &#176;F</h4>
+	      <h4>{{ list.2.weather.0.description }}</h4>
+	    </div>
+
+	    <div class="six-col">
+	      <h5 class="next-day-4 day-title"></h5>
+	      <h3>{{ list.3.weather.0.main }}</h3>
+	      <img class="l-weather-icon" src="http://openweathermap.org/img/w/{{ list.3.weather.0.icon }}.png">
+	      <h4>{{ list.3.temp.day }} &#176;F</h4>
+	      <h4>{{ list.3.weather.0.description }}</h4>
+	    </div>
+
+	    <div class="six-col">
+	      <h5 class="next-day-5 day-title"></h5>
+	      <h3>{{ list.4.weather.0.main }}</h3>
+	      <img class="l-weather-icon" src="http://openweathermap.org/img/w/{{ list.3.weather.0.icon }}.png">
+	      <h4>{{ list.4.temp.day }} &#176;F</h4>
+	      <h4>{{ list.4.weather.0.description }}</h4>
+	    </div>
+
+	    <div class="six-col">
+	      <h5 class="next-day-6 day-title"></h5>
+	      <h3>{{ list.5.weather.0.main }}</h3>
+	      <img class="l-weather-icon" src="http://openweathermap.org/img/w/{{ list.3.weather.0.icon }}.png">
+	      <h4>{{ list.5.temp.day }} &#176;F</h4>
+	      <h4>{{ list.5.weather.0.description }}</h4>
+	    </div>
+
+	</div>
+
+</div>
+
